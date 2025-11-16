@@ -1281,6 +1281,20 @@
       }
     }
   }
+  .hover\:bg-\[\#309983\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #309983;
+      }
+    }
+  }
+  .hover\:bg-\[\#309983\]\/10 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in oklab, #309983 10%, transparent);
+      }
+    }
+  }
   .hover\:bg-\[\#309983\]\/20 {
     &:hover {
       @media (hover: hover) {

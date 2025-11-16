@@ -137,14 +137,23 @@
 //    cart functionality
         document.addEventListener('DOMContentLoaded', function () {
             const addToCartButtons = document.querySelectorAll('.add-to-cart');
-            const cartCount = document.getElementById('cart-count');
-            let cartItems = 3;
+            const cartCountEl = document.getElementById('cart-count');
+            // initialize from existing DOM if present, otherwise start at 0
+            let cartItems = 0;
+            if (cartCountEl) {
+                const parsed = parseInt(cartCountEl.textContent);
+                cartItems = Number.isNaN(parsed) ? 0 : parsed;
+            }
+
             addToCartButtons.forEach(button => {
-                button.addEventListener('click', function () {
+                button.addEventListener('click', function (e) {
+                    // prevent any unintended form submits
+                    if (e && typeof e.preventDefault === 'function') e.preventDefault();
+
                     const card = this.closest('.product-card');
-                    const productName = card.querySelector('h3').textContent;
+                    const productName = card ? (card.querySelector('h3') && card.querySelector('h3').textContent) : '';
                     cartItems++;
-                    cartCount.textContent = cartItems;
+                    if (cartCountEl) cartCountEl.textContent = cartItems;
                     this.textContent = 'Added!';
                     this.classList.add('bg-green-600');
                     setTimeout(() => {
