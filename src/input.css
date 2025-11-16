@@ -1,0 +1,27 @@
+/* src/index.css */
+@import 'tailwindcss';
+
+@theme {
+  
+  --color-primary: #10b981;
+  --color-secondary: #865f46;
+
+  --border-radius-none: 0px;
+  --border-radius-sm: 4px;
+  --border-radius-DEFAULT: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 20px;
+  --border-radius-2xl: 24px;
+  --border-radius-3xl: 32px;
+  --border-radius-full: 9999px;
+  --border-radius-button: 8px; /* Custom radius utility: 'rounded-button' */
+
+  /*
+    3. Font Family (Overrides + Custom Display font)
+    We define the stack using CSS custom properties.
+    You must ensure 'Inter' and 'Pacifico' are loaded via @font-face rules elsewhere.
+  */
+  --default-font-family: Inter, sans-serif; /* Overrides the default font-sans */
+  --font-display: Pacifico, serif; /* Custom font utility: 'font-display' */
+}
