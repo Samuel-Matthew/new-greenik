@@ -25,8 +25,6 @@ background: rgba(0, 0, 0, 0.95);
 }
 
 
-
-
 .pricing-card {
 transition: all 0.3s ease;
 }
@@ -49,22 +47,12 @@ background: linear-gradient(to right, #10b981, transparent);
 .process-step:last-child::after {
 display: none;
 }
-.faq-item {
-border-bottom: 1px solid #374151;
-}
-.faq-content {
-max-height: 0;
-overflow: hidden;
-transition: max-height 0.3s ease;
-}
-.faq-content.active {
-max-height: 200px;
-}
+
 .consultation-form input,
 .consultation-form select,
 .consultation-form textarea {
-background: #111827;
-border: 1px solid #374151;
+background: none;
+border: 1px solid #309983;
 color: white;
 }
 .consultation-form input:focus,
@@ -72,4 +60,83 @@ color: white;
 .consultation-form textarea:focus {
 outline: none;
 border-color: #10b981;
+}
+
+
+
+
+
+.timeline-line {
+background: linear-gradient(to bottom, transparent 0%, #10b981 20%, #10b981 80%, transparent 100%);
+}
+
+
+.team-card {
+transition: all 0.3s ease;
+}
+.team-card:hover {
+transform: translateY(-8px);
+box-shadow: 0 00px 20px rgba(16, 185, 129, 0.15);
+}
+.achievement-card {
+transition: all 0.3s ease;
+}
+.achievement-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 0px 20px rgba(16, 185, 129, 0.1);
+}
+
+
+
+
+
+
+
+
+/* .hero-bg {
+background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(16, 185, 129, 0.1) 100%);
+} */
+.chat-widget {
+animation: pulse 2s infinite;
+}
+.appointment-slot {
+transition: all 0.3s ease;
+}
+.appointment-slot:hover {
+transform: translateY(-2px);
+box-shadow: 0 10px 25px rgba(16, 185, 129, 0.15);
+}
+
+.contact-card {
+transition: all 0.3s ease;
+}
+.contact-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 15px 30px rgba(16, 185, 129, 0.1);
+}
+.form-input {
+transition: all 0.3s ease;
+}
+.form-input:focus {
+box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+.counter-animation {
+animation: countUp 2s ease-out forwards;
+}
+@keyframes countUp {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+.map-marker {
+animation: bounce 2s infinite;
+}
+@keyframes bounce {
+0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+40% { transform: translateY(-10px); }
+60% { transform: translateY(-5px); }
+}
+ @keyframes pulse {
+0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+40% { transform: translateY(-10px); }
+60% { transform: translateY(-5px); }
 }

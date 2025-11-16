@@ -17,21 +17,21 @@
 
 <body class="bg-black text-white font-sans">
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 nav-sticky border-b border-gray-800">
+<header>
+    <!-- nav -->
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-sticky">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
                     <h1 class="text-2xl font-display text-primary">GREENIK</h1>
                 </div>
+                <!-- Desktop links -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html"
-                        data-readdy="true" class="text-gray-300 hover:text-primary transition-colors">Home</a>
-                    <a href="#" class="text-primary font-medium">Products</a>
-                    <a href="https://readdy.ai/home/adfae9c0-0eff-4c6a-a12e-e1cb0bf419a4/235c2730-e15e-4cf8-8d09-118a8603f6d1"
-                        data-readdy="true" class="text-gray-300 hover:text-primary transition-colors">Solutions</a>
-                    <a href="https://readdy.ai/home/adfae9c0-0eff-4c6a-a12e-e1cb0bf419a4/3e63fb8a-ba5b-47d9-9e25-440b397f68af"
-                        data-readdy="true" class="text-gray-300 hover:text-primary transition-colors">About</a>
-                    <a href="#" class="text-gray-300 hover:text-primary transition-colors">Contact</a>
+                    <a href="index.html" class="text-gray-300 hover:text-primary transition-colors">Home</a>
+                    <a href="products.html" class="text-primary font-medium">Products</a>
+                    <a href="solutions.html" class="text-gray-300 hover:text-primary transition-colors">Solutions</a>
+                    <a href="about.html" class="text-gray-300 hover:text-primary transition-colors">About</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-primary transition-colors">Contact</a>
                 </div>
                 <div class="flex items-center space-x-4">
                     <div class="relative">
@@ -43,17 +43,47 @@
                     </div>
                     <div class="relative">
                         <div class="w-8 h-8 flex items-center justify-center">
-                            <i class="ri-shopping-cart-line text-gray-400 hover:text-primary cursor-pointer transition-colors"></i>
+                            <i
+                                class="ri-shopping-cart-line text-gray-400 hover:text-primary cursor-pointer transition-colors"></i>
                         </div>
                         <span
                             class="absolute -top-2 -right-2 bg-primary text-black text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">3</span>
                     </div>
+
+                    <!-- Desktop styled login icon -->
+                    <div class="hidden md:flex items-center justify-center w-9 h-9 rounded-full border border-gray-700 text-gray-400 hover:bg-primary hover:text-black transition-colors cursor-pointer"
+                        title="Login" aria-label="Login">
+                        <i class="ri-login-box-line text-lg"></i>
+                    </div>
+
+                    <!-- Mobile hamburger -->
+                    <button id="mobile-menu-button" aria-expanded="false" aria-label="Open menu"
+                        class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-primary hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <i class="ri-menu-line text-2xl"></i>
+                    </button>
                 </div>
             </div>
         </div>
+
+        <!-- Mobile dropdown menu -->
+        <div id="mobile-menu"
+            class="md:hidden hidden absolute top-full left-0 right-0 bg-black border-t border-gray-800 z-40">
+            <div class="px-4 py-3 space-y-2">
+                <a href="index.html" class="block text-gray-300 hover:text-primary px-3 py-2 rounded-md">Home</a>
+                <a href="products.html" class="block text-gray-300 hover:text-primary px-3 py-2 rounded-md">Products</a>
+                <a href="solutions.html"
+                    class="block text-gray-300 hover:text-primary px-3 py-2 rounded-md">Solutions</a>
+                <a href="about.html" class="block text-gray-300 hover:text-primary px-3 py-2 rounded-md">About</a>
+                <a href="contact.html" class="block text-gray-300 hover:text-primary px-3 py-2 rounded-md">Contact</a>
+                <a href="#" class="flex items-center gap-2 text-gray-300 hover:text-primary px-3 py-2 rounded-md"><i
+                        class="ri-login-box-line"></i><span>Login</span></a>
+            </div>
+        </div>
+
     </nav>
+</header>
     <!-- Page Header -->
-    <section class="pt-24 pb-8 bg-gray-900">
+    <section class="pt-24 pb-8 bg-[#309983]/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-8">
                 <nav class="text-sm text-gray-400 mb-4">
@@ -67,13 +97,15 @@
             </div>
         </div>
     </section>
+
     <!-- Main Product Section -->
     <section class="py-8 bg-black min-h-screen">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row gap-8">
+
                 <!-- Sidebar Filters -->
                 <div class="lg:w-1/4">
-                    <div class="bg-gray-900 rounded-xl p-6 sticky top-24">
+                    <div class="bg-[#309983]/10 rounded-xl p-6 sticky top-24">
                         <div class="flex items-center justify-between mb-6">
                             <h3 class="text-lg font-semibold">Filters</h3>
                             <button id="clear-filters" class="text-sm text-gray-400 hover:text-primary">Clear
@@ -147,7 +179,7 @@
                             </div>
                         </div>
                         <!-- Power Capacity -->
-                        <div class="mb-8">
+                        <!-- <div class="mb-8">
                             <h4 class="font-medium mb-4">Power Capacity</h4>
                             <div class="space-y-3">
                                 <label class="flex items-center gap-3 cursor-pointer">
@@ -163,7 +195,7 @@
                                     <span class="text-sm">Over 15kW</span>
                                 </label>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- Main Content -->
@@ -174,7 +206,7 @@
                             <div class="flex-1 relative">
                                 <input type="text" id="product-search"
                                     placeholder="Search products by name, model, or specifications..."
-                                    class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 pl-12 text-white placeholder-gray-400 focus:outline-none focus:border-primary">
+                                    class="w-full bg-[#309983]/10 bg-[#309983]/10 border border-[#309983]/10 rounded-lg px-4 py-3 pl-12 text-white placeholder-gray-400 focus:outline-none focus:border-primary">
                                 <div
                                     class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center">
                                     <i class="ri-search-line text-gray-400"></i>
@@ -183,23 +215,22 @@
                         </div>
                         <!-- Category Filters -->
                         <div class="flex flex-wrap gap-3 mb-6">
-                            <button
-                                class="category-filter px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap"
+                            <button class="category-filter px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap"
                                 data-category="all">All Products</button>
                             <button
-                                class="category-filter px-4 py-2 rounded-lg text-sm font-medium bg-gray-800 hover:bg-gray-700 whitespace-nowrap"
+                                class="category-filter px-4 py-2 rounded-lg text-sm font-medium bg-[#309983]/10 hover:bg-[#309983]/20 whitespace-nowrap"
                                 data-category="solar">Solar Kits</button>
                             <button
-                                class="category-filter px-4 py-2 rounded-lg text-sm font-medium bg-gray-800 hover:bg-gray-700 whitespace-nowrap"
+                                class="category-filter px-4 py-2 rounded-lg text-sm font-medium bg-[#309983]/10 hover:bg-[#309983]/20 whitespace-nowrap"
                                 data-category="wind">Wind Turbines</button>
                             <button
-                                class="category-filter px-4 py-2 rounded-lg text-sm font-medium bg-gray-800 hover:bg-gray-700 whitespace-nowrap filter-active"
+                                class="category-filter px-4 py-2 rounded-lg text-sm font-medium bg-[#309983]/10 hover:bg-[#309983]/20 whitespace-nowrap filter-active"
                                 data-category="ev">EV Chargers</button>
                             <button
-                                class="category-filter px-4 py-2 rounded-lg text-sm font-medium bg-gray-800 hover:bg-gray-700 whitespace-nowrap"
+                                class="category-filter px-4 py-2 rounded-lg text-sm font-medium bg-[#309983]/10 hover:bg-[#309983]/20 whitespace-nowrap"
                                 data-category="batteries">Batteries</button>
                             <button
-                                class="category-filter px-4 py-2 rounded-lg text-sm font-medium bg-gray-800 hover:bg-gray-700 whitespace-nowrap"
+                                class="category-filter px-4 py-2 rounded-lg text-sm font-medium bg-[#309983]/10 hover:bg-[#309983]/20 whitespace-nowrap"
                                 data-category="accessories">Accessories</button>
                         </div>
                         <!-- Sorting and View Options -->
@@ -211,7 +242,7 @@
                                 <div class="flex items-center gap-2">
                                     <span class="text-sm text-gray-400">Sort by:</span>
                                     <select id="sort-select"
-                                        class="bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-primary pr-8">
+                                        class="bg-[#309983]/10 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-primary pr-8">
                                         <option value="popular">Most Popular</option>
                                         <option value="price-low">Price: Low to High</option>
                                         <option value="price-high">Price: High to Low</option>
@@ -219,7 +250,7 @@
                                         <option value="rating">Highest Rated</option>
                                     </select>
                                 </div>
-                                <div class="flex items-center gap-2 bg-gray-900 rounded-lg p-1">
+                                <div class="flex items-center gap-2 bg-[#309983]/10 rounded-lg p-1">
                                     <button id="grid-view" class="p-2 rounded bg-primary text-black">
                                         <div class="w-4 h-4 flex items-center justify-center">
                                             <i class="ri-grid-fill text-sm"></i>
@@ -236,7 +267,7 @@
                         <!-- Product Grid -->
                         <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
                             <!-- Solar Kit Products -->
-                            <div class="product-card bg-gray-900 rounded-xl overflow-hidden card-hover"
+                            <div class="product-card bg-[#309983]/10 rounded-xl overflow-hidden card-hover"
                                 data-category="solar" data-price="1299" data-rating="4.8" data-brand="SolarTech"
                                 style="display: none;">
                                 <div class="relative">
@@ -293,7 +324,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="product-card bg-gray-900 rounded-xl overflow-hidden card-hover"
+                            <div class="product-card bg-[#309983]/10 rounded-xl overflow-hidden card-hover"
                                 data-category="wind" data-price="2499" data-rating="4.6" data-brand="WindMax"
                                 style="display: none;">
                                 <div class="relative">
@@ -345,7 +376,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="product-card bg-gray-900 rounded-xl overflow-hidden card-hover"
+                            <div class="product-card bg-[#309983]/10 rounded-xl overflow-hidden card-hover"
                                 data-category="ev" data-price="899" data-rating="4.9" data-brand="EcoCharge"
                                 style="display: block;">
                                 <div class="relative">
@@ -400,7 +431,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="product-card bg-gray-900 rounded-xl overflow-hidden card-hover"
+                            <div class="product-card bg-[#309983]/10 rounded-xl overflow-hidden card-hover"
                                 data-category="batteries" data-price="3299" data-rating="4.7" data-brand="PowerStore"
                                 style="display: none;">
                                 <div class="relative">
@@ -452,7 +483,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="product-card bg-gray-900 rounded-xl overflow-hidden card-hover"
+                            <div class="product-card bg-[#309983]/10 rounded-xl overflow-hidden card-hover"
                                 data-category="accessories" data-price="299" data-rating="4.5" data-brand="SolarTech"
                                 style="display: none;">
                                 <div class="relative">
@@ -504,7 +535,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="product-card bg-gray-900 rounded-xl overflow-hidden card-hover"
+                            <div class="product-card bg-[#309983]/10 rounded-xl overflow-hidden card-hover"
                                 data-category="solar" data-price="799" data-rating="4.4" data-brand="SolarTech"
                                 style="display: none;">
                                 <div class="relative">
@@ -564,8 +595,7 @@
                                 <button
                                     class="px-4 py-2 border border-gray-700 rounded-lg hover:border-primary transition-colors whitespace-nowrap">Previous</button>
                                 <div class="flex items-center gap-1">
-                                    <button
-                                        class="w-10 h-10 bg-primary text-black rounded-lg font-medium">1</button>
+                                    <button class="w-10 h-10 bg-primary text-black rounded-lg font-medium">1</button>
                                     <button class="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-lg">2</button>
                                     <button class="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-lg">3</button>
                                     <span class="px-2 text-gray-400">...</span>
@@ -575,7 +605,7 @@
                                     class="px-4 py-2 border border-gray-700 rounded-lg hover:border-primary transition-colors whitespace-nowrap">Next</button>
                             </div>
                             <button id="back-to-top"
-                                class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors whitespace-nowrap">
+                                class="px-4 py-2 bg-primary rounded-lg transition-colors whitespace-nowrap">
                                 <div class="flex items-center gap-2">
                                     <i class="ri-arrow-up-line"></i>
                                     <span>Back to Top</span>
@@ -604,7 +634,7 @@
         </div>
     </div> -->
     <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800 py-16">
+    <footer class="bg-[#309983]/10 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
@@ -682,9 +712,9 @@
             </div>
         </div>
     </footer>
-  
-  
-  
+
+
+
     <!-- Quick View Modal -->
     <div id="quick-view-modal"
         class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
@@ -785,8 +815,7 @@
                                 class="flex-1 bg-primary text-black px-6 py-3 !rounded-lg font-medium hover:bg-green-400 transition-colors whitespace-nowrap">Add
                                 to Cart</button>
                             <button
-                                class="px-6 py-3 border border-gray-700 rounded-lg hover:border-primary transition-colors whitespace-nowrap">View
-                                Full Details</button>
+                                class="px-6 py-3 border border-gray-700 rounded-lg hover:border-primary transition-colors whitespace-nowrap">Buy now</button>
                         </div>
                     </div>
                 </div>
@@ -839,10 +868,11 @@
             </div>
         </div>
     </div>
-  
-    
+
+
     <script src="js/product.js"></script>
     <script src="js/search-functionality.js"></script>
+    <script src="js/nav.js"></script>
 </body>
 
 </html>

@@ -5,17 +5,9 @@
   
   --color-primary: #10b981;
   --color-secondary: #865f46;
+  --color-accent: #309983/10;
 
-  --border-radius-none: 0px;
-  --border-radius-sm: 4px;
-  --border-radius-DEFAULT: 8px;
-  --border-radius-md: 12px;
-  --border-radius-lg: 16px;
-  --border-radius-xl: 20px;
-  --border-radius-2xl: 24px;
-  --border-radius-3xl: 32px;
-  --border-radius-full: 9999px;
-  --border-radius-button: 8px; /* Custom radius utility: 'rounded-button' */
+  
 
   /*
     3. Font Family (Overrides + Custom Display font)
